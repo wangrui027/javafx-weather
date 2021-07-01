@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?language javascript?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<GridPane fx:id="gridPane" alignment="center" hgap="10" styleClass="root" stylesheets="@../css/index.css" vgap="10"
+          xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.2"
+          minWidth="800" minHeight="260"
+          fx:controller="com.wangrui027.javafx.weather.WeatherAppController">
+    <padding>
+        <Insets bottom="10" left="25" right="25" top="25"/>
+    </padding>
+<!--    <gridLinesVisible>true</gridLinesVisible>-->
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <ChoiceBox fx:id="provinceChoiceBox" minWidth="100" onAction="#provinceChoiceBoxAction"/>
+        <ChoiceBox fx:id="cityChoiceBox" minWidth="100" onAction="#cityChoiceBoxAction"/>
+        <ChoiceBox fx:id="countryChoiceBox" minWidth="100"/>
+        <Button id="countryConfirmBtn" onAction="#countryConfirmAction" text="确定"/>
+        <Label fx:id="dataUpdateTimeLabel" text="NULL" alignment="CENTER_RIGHT"/>
+        <Label text="更新 | 数据来源 中央气象台"/>
+    </HBox>
+    <HBox fx:id="weatherInfoBox" alignment="CENTER" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="1" minHeight="164">
+        <Label styleClass="startupMessageLabel" text="选择区域点击确认按钮获取最新天气数据"/>
+    </HBox>
+</GridPane>

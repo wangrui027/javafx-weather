@@ -1,0 +1,427 @@
+.weatherVBox {
+    -fx-text-fill: #fff;
+}
+
+.weatherVBox.lv1 {
+    -fx-background-color: linear-gradient(to bottom, #0e7fdf, #69b8f0);
+}
+
+.weatherVBox.lv2 {
+    -fx-background-color: linear-gradient(to bottom, #50b2fb, #a6d4f6);
+}
+
+.weatherVBox.lv3 {
+    -fx-background-color: linear-gradient(to bottom, #88a9ca, #bcd3e3);
+}
+
+.weatherVBox.lv4 {
+    -fx-background-color: linear-gradient(to bottom, #999691, #c5c5c5);
+}
+
+.startupMessageLabel {
+    -fx-font-size: 24px;
+    -fx-min-width: 760px;
+    -fx-min-height: 80px;
+    -fx-alignment: CENTER;
+    -fx-text-fill: green;
+}
+
+.weatherVBox .wea_icon {
+    -fx-background-image: url("../images/white30.png");
+    height: 30px;
+    width: 30px
+}
+
+.weatherVBox .wea_icon.d0, .weatherVBox .wea_icon.d00 {
+    -fx-background-position: 0 0
+}
+
+.weatherVBox .wea_icon.d1, .weatherVBox .wea_icon.d01 {
+    -fx-background-position: -80px 0
+}
+
+.weatherVBox .wea_icon.d2, .weatherVBox .wea_icon.d02 {
+    -fx-background-position: -160px 0
+}
+
+.weatherVBox .wea_icon.d3, .weatherVBox .wea_icon.d03 {
+    -fx-background-position: -240px 0
+}
+
+.weatherVBox .wea_icon.d4, .weatherVBox .wea_icon.d04 {
+    -fx-background-position: -320px 0
+}
+
+.weatherVBox .wea_icon.d5, .weatherVBox .wea_icon.d05 {
+    -fx-background-position: -400px 0
+}
+
+.weatherVBox .wea_icon.d6, .weatherVBox .wea_icon.d06 {
+    -fx-background-position: -480px 0
+}
+
+.weatherVBox .wea_icon.d7, .weatherVBox .wea_icon.d07 {
+    -fx-background-position: -560px 0
+}
+
+.weatherVBox .wea_icon.d8, .weatherVBox .wea_icon.d08 {
+    -fx-background-position: -640px 0
+}
+
+.weatherVBox .wea_icon.d9, .weatherVBox .wea_icon.d09 {
+    -fx-background-position: 0 -80px
+}
+
+.weatherVBox .wea_icon.d10 {
+    -fx-background-position: -80px -80px
+}
+
+.weatherVBox .wea_icon.d11 {
+    -fx-background-position: -160px -80px
+}
+
+.weatherVBox .wea_icon.d12 {
+    -fx-background-position: -240px -80px
+}
+
+.weatherVBox .wea_icon.d13 {
+    -fx-background-position: -320px -80px
+}
+
+.weatherVBox .wea_icon.d14 {
+    -fx-background-position: -400px -80px
+}
+
+.weatherVBox .wea_icon.d15 {
+    -fx-background-position: -480px -80px
+}
+
+.weatherVBox .wea_icon.d16 {
+    -fx-background-position: -560px -80px
+}
+
+.weatherVBox .wea_icon.d17 {
+    -fx-background-position: -640px -80px
+}
+
+.weatherVBox .wea_icon.d18 {
+    -fx-background-position: 0 -160px
+}
+
+.weatherVBox .wea_icon.d19 {
+    -fx-background-position: -80px -160px
+}
+
+.weatherVBox .wea_icon.d20 {
+    -fx-background-position: -160px -160px
+}
+
+.weatherVBox .wea_icon.d21 {
+    -fx-background-position: -240px -160px
+}
+
+.weatherVBox .wea_icon.d22 {
+    -fx-background-position: -320px -160px
+}
+
+.weatherVBox .wea_icon.d23 {
+    -fx-background-position: -400px -160px
+}
+
+.weatherVBox .wea_icon.d24 {
+    -fx-background-position: -480px -160px
+}
+
+.weatherVBox .wea_icon.d25 {
+    -fx-background-position: -560px -160px
+}
+
+.weatherVBox .wea_icon.d26 {
+    -fx-background-position: -640px -160px
+}
+
+.weatherVBox .wea_icon.d27 {
+    -fx-background-position: 0 -240px
+}
+
+.weatherVBox .wea_icon.d28 {
+    -fx-background-position: -80px -240px
+}
+
+.weatherVBox .wea_icon.d29 {
+    -fx-background-position: -160px -240px
+}
+
+.weatherVBox .wea_icon.d30 {
+    -fx-background-position: -240px -240px
+}
+
+.weatherVBox .wea_icon.d31 {
+    -fx-background-position: -320px -240px
+}
+
+.weatherVBox .wea_icon.d32 {
+    -fx-background-position: -400px -240px
+}
+
+.weatherVBox .wea_icon.d33 {
+    -fx-background-position: -480px -240px
+}
+
+.weatherVBox .wea_icon.d53 {
+    -fx-background-position: -560px -240px
+}
+
+.weatherVBox .wea_icon.d57 {
+    -fx-background-position: -720px 0
+}
+
+.weatherVBox .wea_icon.d32 {
+    -fx-background-position: -720px -80px
+}
+
+.weatherVBox .wea_icon.d49 {
+    -fx-background-position: -720px -160px
+}
+
+.weatherVBox .wea_icon.d58 {
+    -fx-background-position: -720px -240px
+}
+
+.weatherVBox .wea_icon.d54 {
+    -fx-background-position: -800px 0
+}
+
+.weatherVBox .wea_icon.d55 {
+    -fx-background-position: -800px -80px
+}
+
+.weatherVBox .wea_icon.d56 {
+    -fx-background-position: -800px -160px
+}
+
+.weatherVBox .wea_icon.d301 {
+    -fx-background-position: -880px 0
+}
+
+.weatherVBox .wea_icon.d302 {
+    -fx-background-position: -880px -80px
+}
+
+.weatherVBox .wea_icon.n0, .weatherVBox .wea_icon.n00 {
+    -fx-background-position: 0 -320px
+}
+
+.weatherVBox .wea_icon.n1, .weatherVBox .wea_icon.n01 {
+    -fx-background-position: -80px -320px
+}
+
+.weatherVBox .wea_icon.n2, .weatherVBox .wea_icon.n02 {
+    -fx-background-position: -160px -320px
+}
+
+.weatherVBox .wea_icon.n3, .weatherVBox .wea_icon.n03 {
+    -fx-background-position: -240px -320px
+}
+
+.weatherVBox .wea_icon.n4, .weatherVBox .wea_icon.n04 {
+    -fx-background-position: -320px -320px
+}
+
+.weatherVBox .wea_icon.n5, .weatherVBox .wea_icon.n05 {
+    -fx-background-position: -400px -320px
+}
+
+.weatherVBox .wea_icon.n6, .weatherVBox .wea_icon.n06 {
+    -fx-background-position: -480px -320px
+}
+
+.weatherVBox .wea_icon.n7, .weatherVBox .wea_icon.n07 {
+    -fx-background-position: -560px -320px
+}
+
+.weatherVBox .wea_icon.n8, .weatherVBox .wea_icon.n08 {
+    -fx-background-position: -640px -320px
+}
+
+.weatherVBox .wea_icon.n9, .weatherVBox .wea_icon.n09 {
+    -fx-background-position: 0 -400px
+}
+
+.weatherVBox .wea_icon.n10 {
+    -fx-background-position: -80px -400px
+}
+
+.weatherVBox .wea_icon.n11 {
+    -fx-background-position: -160px -400px
+}
+
+.weatherVBox .wea_icon.n12 {
+    -fx-background-position: -240px -400px
+}
+
+.weatherVBox .wea_icon.n13 {
+    -fx-background-position: -320px -400px
+}
+
+.weatherVBox .wea_icon.n14 {
+    -fx-background-position: -400px -400px
+}
+
+.weatherVBox .wea_icon.n15 {
+    -fx-background-position: -480px -400px
+}
+
+.weatherVBox .wea_icon.n16 {
+    -fx-background-position: -560px -400px
+}
+
+.weatherVBox .wea_icon.n17 {
+    -fx-background-position: -640px -400px
+}
+
+.weatherVBox .wea_icon.n18 {
+    -fx-background-position: 0 -480px
+}
+
+.weatherVBox .wea_icon.n19 {
+    -fx-background-position: -80px -480px
+}
+
+.weatherVBox .wea_icon.n20 {
+    -fx-background-position: -160px -480px
+}
+
+.weatherVBox .wea_icon.n21 {
+    -fx-background-position: -240px -480px
+}
+
+.weatherVBox .wea_icon.n22 {
+    -fx-background-position: -320px -480px
+}
+
+.weatherVBox .wea_icon.n23 {
+    -fx-background-position: -400px -480px
+}
+
+.weatherVBox .wea_icon.n24 {
+    -fx-background-position: -480px -480px
+}
+
+.weatherVBox .wea_icon.n25 {
+    -fx-background-position: -560px -480px
+}
+
+.weatherVBox .wea_icon.n26 {
+    -fx-background-position: -640px -480px
+}
+
+.weatherVBox .wea_icon.n27 {
+    -fx-background-position: 0 -560px
+}
+
+.weatherVBox .wea_icon.n28 {
+    -fx-background-position: -80px -560px
+}
+
+.weatherVBox .wea_icon.n29 {
+    -fx-background-position: -160px -560px
+}
+
+.weatherVBox .wea_icon.n30 {
+    -fx-background-position: -240px -560px
+}
+
+.weatherVBox .wea_icon.n31 {
+    -fx-background-position: -320px -560px
+}
+
+.weatherVBox .wea_icon.n32 {
+    -fx-background-position: -400px -560px
+}
+
+.weatherVBox .wea_icon.n33 {
+    -fx-background-position: -480px -560px
+}
+
+.weatherVBox .wea_icon.n53 {
+    -fx-background-position: -560px -560px
+}
+
+.weatherVBox .wea_icon.n57 {
+    -fx-background-position: -720px -320px
+}
+
+.weatherVBox .wea_icon.n32 {
+    -fx-background-position: -720px -400px
+}
+
+.weatherVBox .wea_icon.n49 {
+    -fx-background-position: -720px -480px
+}
+
+.weatherVBox .wea_icon.n58 {
+    -fx-background-position: -720px -560px
+}
+
+.weatherVBox .wea_icon.n54 {
+    -fx-background-position: -800px -320px
+}
+
+.weatherVBox .wea_icon.n55 {
+    -fx-background-position: -800px -400px
+}
+
+.weatherVBox .wea_icon.n56 {
+    -fx-background-position: -800px -480px
+}
+
+.weatherVBox .wea_icon.n301 {
+    -fx-background-position: -880px -320px
+}
+
+.weatherVBox .wea_icon.n302 {
+    -fx-background-position: -880px -400px
+}
+
+.weatherVBox .win_icon {
+    -fx-background-image: url("../images/iconall.png");
+    height: 30px;
+    width: 30px
+}
+
+.weatherVBox .win_icon.NNW {
+    -fx-background-position: -200px -0px
+}
+
+.weatherVBox .win_icon.S {
+    -fx-background-position: -200px -22px
+}
+
+.weatherVBox .win_icon.N {
+    -fx-background-position: -200px -46px
+}
+
+.weatherVBox .win_icon.W {
+    -fx-background-position: -200px -91px
+}
+
+.weatherVBox .win_icon.E {
+    -fx-background-position: -200px -69px
+}
+
+.weatherVBox .win_icon.NE {
+    -fx-background-position: -200px -164px
+}
+
+.weatherVBox .win_icon.NW {
+    -fx-background-position: -200px -188px
+}
+
+.weatherVBox .win_icon.SE {
+    -fx-background-position: -200px -115px
+}
+
+.weatherVBox .win_icon.SW {
+    -fx-background-position: -200px -138px
+}
