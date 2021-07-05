@@ -7,6 +7,7 @@ import com.wangrui027.javafx.weather.model.County;
 import com.wangrui027.javafx.weather.model.Province;
 
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -25,34 +26,38 @@ public class WeatherDataUtils {
      */
     public static List<Province> getProvinceList() {
         if (provinceList.isEmpty()) {
-            JsonObject jsonObject = JsonParser.parseReader(new InputStreamReader(WeatherDataUtils.class.getResourceAsStream("/json/city.json"))).getAsJsonObject();
-            Set<String> provinceNameSet = jsonObject.keySet();
-            for (String provinceName : provinceNameSet) {
-                Province province = new Province();
-                province.setName(provinceName);
-                JsonObject cityListObject = jsonObject.getAsJsonObject(provinceName);
-                Set<String> cityNameSet = cityListObject.keySet();
-                List<City> cityList = new ArrayList<>();
-                province.setCityList(cityList);
-                for (String cityName : cityNameSet) {
-                    City city = new City();
-                    city.setName(cityName);
-                    city.setProvince(province);
-                    cityList.add(city);
-                    JsonObject countryListObject = cityListObject.getAsJsonObject(cityName);
-                    Set<String> countryNameSet = countryListObject.keySet();
-                    List<County> countyList = new ArrayList<>();
-                    city.setCountyList(countyList);
-                    for (String countryName : countryNameSet) {
-                        JsonObject countryObject = countryListObject.getAsJsonObject(countryName);
-                        County county = new County();
-                        county.setName(countryObject.get("NAMECN").getAsString());
-                        county.setAreaId(countryObject.get("AREAID").getAsString());
-                        county.setCity(city);
-                        countyList.add(county);
+            try {
+                JsonObject jsonObject = JsonParser.parseReader(new InputStreamReader(WeatherDataUtils.class.getResourceAsStream("/json/city.json"), "UTF-8")).getAsJsonObject();
+                Set<String> provinceNameSet = jsonObject.keySet();
+                for (String provinceName : provinceNameSet) {
+                    Province province = new Province();
+                    province.setName(provinceName);
+                    JsonObject cityListObject = jsonObject.getAsJsonObject(provinceName);
+                    Set<String> cityNameSet = cityListObject.keySet();
+                    List<City> cityList = new ArrayList<>();
+                    province.setCityList(cityList);
+                    for (String cityName : cityNameSet) {
+                        City city = new City();
+                        city.setName(cityName);
+                        city.setProvince(province);
+                        cityList.add(city);
+                        JsonObject countryListObject = cityListObject.getAsJsonObject(cityName);
+                        Set<String> countryNameSet = countryListObject.keySet();
+                        List<County> countyList = new ArrayList<>();
+                        city.setCountyList(countyList);
+                        for (String countryName : countryNameSet) {
+                            JsonObject countryObject = countryListObject.getAsJsonObject(countryName);
+                            County county = new County();
+                            county.setName(countryObject.get("NAMECN").getAsString());
+                            county.setAreaId(countryObject.get("AREAID").getAsString());
+                            county.setCity(city);
+                            countyList.add(county);
+                        }
                     }
+                    provinceList.add(province);
                 }
-                provinceList.add(province);
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
             }
         }
         return provinceList;
