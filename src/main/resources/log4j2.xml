@@ -23,6 +23,7 @@
     <loggers>
         <root level="all">
             <appender-ref ref="Console"/>
+            <appender-ref ref="RollingFile"/>
         </root>
     </loggers>
 </configuration>
