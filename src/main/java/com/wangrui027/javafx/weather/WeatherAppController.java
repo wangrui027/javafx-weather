@@ -1,5 +1,7 @@
 package com.wangrui027.javafx.weather;
 
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.wangrui027.javafx.weather.model.City;
 import com.wangrui027.javafx.weather.model.County;
 import com.wangrui027.javafx.weather.model.Province;
@@ -14,7 +16,6 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.ScrollBar;
 import javafx.scene.control.Tooltip;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -68,6 +69,33 @@ public class WeatherAppController implements Initializable {
         List<Province> provinceList = WeatherDataUtils.getProvinceList();
         List<City> cityList = provinceList.get(0).getCityList();
         List<County> countyList = cityList.get(0).getCountyList();
+        String provinceName = null;
+        String cityName = null;
+        String regionJson = restUtils.get("http://ipw.cn/api/ip/region");
+        JsonObject jsonObject = JsonParser.parseString(regionJson).getAsJsonObject();
+        if (jsonObject.has("Address")) {
+            jsonObject = jsonObject.getAsJsonObject("Address");
+            provinceName = jsonObject.get("Province").getAsString();
+            cityName = jsonObject.get("City").getAsString();
+        }
+        if (provinceName != null) {
+            for (Province province : provinceList) {
+                if (provinceName.startsWith(province.getName())) {
+                    cityList = province.getCityList();
+                    provinceName = province.getName();
+                    break;
+                }
+            }
+        }
+        if (cityName != null) {
+            for (City city : cityList) {
+                if (cityName.startsWith(city.getName())) {
+                    countyList = city.getCountyList();
+                    cityName = city.getName();
+                    break;
+                }
+            }
+        }
         for (Province province : provinceList) {
             provinceChoiceBox.getItems().add(province.getName());
         }
@@ -77,7 +105,12 @@ public class WeatherAppController implements Initializable {
         for (County county : countyList) {
             countryChoiceBox.getItems().add(county.getName());
         }
-        provinceChoiceBox.getSelectionModel().selectFirst();
+        if (provinceName != null && cityName != null) {
+            provinceChoiceBox.getSelectionModel().select(provinceName);
+            cityChoiceBox.getSelectionModel().select(cityName);
+        } else {
+            provinceChoiceBox.getSelectionModel().selectFirst();
+        }
         queryWeather();
     }
 
