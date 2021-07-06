@@ -71,13 +71,13 @@ public class WeatherAppController implements Initializable {
         List<County> countyList = cityList.get(0).getCountyList();
         String provinceName = null;
         String cityName = null;
-        String regionJson = restUtils.get("http://ipw.cn/api/ip/region");
-        JsonObject jsonObject = JsonParser.parseString(regionJson).getAsJsonObject();
-        if (jsonObject.has("Address")) {
-            jsonObject = jsonObject.getAsJsonObject("Address");
-            provinceName = jsonObject.get("Province").getAsString();
-            cityName = jsonObject.get("City").getAsString();
-        }
+//        String regionJson = restUtils.get("http://ipw.cn/api/ip/region");
+//        JsonObject jsonObject = JsonParser.parseString(regionJson).getAsJsonObject();
+//        if (jsonObject.has("Address")) {
+//            jsonObject = jsonObject.getAsJsonObject("Address");
+//            provinceName = jsonObject.get("Province").getAsString();
+//            cityName = jsonObject.get("City").getAsString();
+//        }
         if (provinceName != null) {
             for (Province province : provinceList) {
                 if (provinceName.startsWith(province.getName())) {
