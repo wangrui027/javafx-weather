@@ -83,6 +83,19 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>com.zenjava</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>8.8.3</version>
+                <configuration>
+                    <mainClass>com.wangrui027.javafx.weather.WeatherApp</mainClass>
+                    <appName>javafx-weather</appName>
+                    <vendor>wangrui027@outlook.com</vendor>
+                    <bundleArguments>
+                        <runtime/>
+                    </bundleArguments>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
